@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/backtracking/SubsetSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SubsetSumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/backtracking/HamiltonianCycle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SubsetSumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BacktrackingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +71,8 @@
       <recent name="C:\Users\kaluc\Documents\CDS\src\main\java\com\saxion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SubsetSumTest">
-    <configuration name="GraphTest.AddEdge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.BacktrackingTest.GetHamiltonianCycle">
+    <configuration name="BacktrackingTest.GetHamiltonianCycle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -86,7 +85,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GraphTest.AddEdge&quot;" />
+            <option value="&quot;BacktrackingTest.GetHamiltonianCycle&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BacktrackingTest.GetHamiltonianCycle" />
         <item itemvalue="Gradle.SubsetSumTest" />
         <item itemvalue="Gradle.SubsetSumTest.SubsetSumTest" />
         <item itemvalue="Gradle.GraphTest.BreadthFirstTraversal" />
         <item itemvalue="Gradle.GraphTest.DepthFirstTraversal" />
-        <item itemvalue="Gradle.GraphTest.AddEdge" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +208,7 @@
       <workItem from="1667736006379" duration="5641000" />
       <workItem from="1667742995044" duration="324000" />
       <workItem from="1667743324461" duration="6213000" />
-      <workItem from="1667749971393" duration="9558000" />
+      <workItem from="1667749971393" duration="10500000" />
     </task>
     <servers />
   </component>
