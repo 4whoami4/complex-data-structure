@@ -41,6 +41,7 @@ public class Reader {
 
     private static Package ParsePackage(String line) {
         String[] values = line.split(";");
-        return new Package(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]), Float.parseFloat(values[4]), values[5], Integer.parseInt(values[6]));
+        return new Package(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]),
+                Integer.parseInt(values[3]), Float.parseFloat(values[4]), values[5], Integer.parseInt(values[6]));
     }
 }
