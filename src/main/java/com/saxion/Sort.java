@@ -1,9 +1,11 @@
 package com.saxion;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Sort {
-    public static <T extends Comparable<T>> void Bubble(ArrayList<T> list) {
+    public static <T extends Comparable<T>> void Bubble(List<T> list) {
         for (int i = 0; i < list.size() - 1; i++) {
             for (int j = 0; j < list.size() - i - 1; j++) {
                 if (list.get(j).compareTo(list.get(j + 1)) > 0) {
@@ -15,7 +17,7 @@ public class Sort {
         }
     }
 
-    public static <T extends Comparable<T>> void Selection(ArrayList<T> list) {
+    public static <T extends Comparable<T>> void Selection(List<T> list) {
         for (int i = 0; i < list.size() - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < list.size(); j++) {
@@ -29,7 +31,7 @@ public class Sort {
         }
     }
 
-    public static <T extends Comparable<T>> void Insertion(ArrayList<T> list) {
+    public static <T extends Comparable<T>> void Insertion(List<T> list) {
         for (int i = 1; i < list.size(); i++) {
             T key = list.get(i);
             int j = i - 1;
@@ -41,10 +43,10 @@ public class Sort {
         }
     }
 
-    public static <T extends Comparable<T>> void Merge(ArrayList<T> list) {
+    public static <T extends Comparable<T>> void Merge(List<T> list) {
         if (list.size() > 1) {
-            ArrayList<T> left = new ArrayList<>();
-            ArrayList<T> right = new ArrayList<>();
+            List<T> left = new ArrayList<>();
+            List<T> right = new ArrayList<>();
             for (int i = 0; i < list.size() / 2; i++) {
                 left.add(list.get(i));
             }
@@ -77,11 +79,36 @@ public class Sort {
         }
     }
 
-    public static <T extends Comparable<T>> void Quick(ArrayList<T> list) {
+    public static void Quick(int[] array, int low, int high) {
+        if (low < high) {
+            int pivot = Partition(array, low, high);
+            Quick(array, low, pivot - 1);
+            Quick(array, pivot + 1, high);
+        }
+    }
+
+    private static int Partition(int[] array, int low, int high) {
+        int pivot = array[high];
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (array[j] < pivot) {
+                i++;
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        int temp = array[i + 1];
+        array[i + 1] = array[high];
+        array[high] = temp;
+        return i + 1;
+    }
+
+    public static <T extends Comparable<T>> void Quick(List<T> list) {
         Quick(list, 0, list.size() - 1);
     }
 
-    private static <T extends Comparable<T>> void Quick(ArrayList<T> list, int low, int high) {
+    public static <T extends Comparable<T>> void Quick(List<T> list, int low, int high) {
         if (low < high) {
             int pivot = Partition(list, low, high);
             Quick(list, low, pivot - 1);
@@ -89,7 +116,7 @@ public class Sort {
         }
     }
 
-    private static <T extends Comparable<T>> int Partition(ArrayList<T> list, int low, int high) {
+    private static <T extends Comparable<T>> int Partition(List<T> list, int low, int high) {
         T pivot = list.get(high);
         int i = low - 1;
         for (int j = low; j < high; j++) {
