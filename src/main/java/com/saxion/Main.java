@@ -1,6 +1,7 @@
 package com.saxion;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,10 +9,9 @@ public class Main {
         ArrayList<Customer> customers = Reader.ReadCustomers();
         ArrayList<Package> packages = Reader.ReadPackages();
 
-        Customer customer = Search.Linear(customers, customers.get(0));
-        System.out.println(customer);
-
-        Package pack = Search.Binary(packages, packages.get(2));
-        System.out.println(pack);
+        HashMap<Integer, Customer> customerHashMap = new HashMap<>();
+        for (Customer customer : customers) {
+            customerHashMap.put(customer.clientId(), customer);
+        }
     }
 }

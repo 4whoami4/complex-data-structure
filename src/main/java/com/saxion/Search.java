@@ -1,9 +1,14 @@
 package com.saxion;
 
-import java.util.ArrayList;
+import org.apache.commons.math3.util.Pair;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Search {
-    public static <T> T Linear(ArrayList<T> list, T value) {
+    public static <T> T Linear(Iterable<T> list, T value) {
         for (T item : list) {
             if (item.equals(value))
                 return item;
@@ -11,7 +16,11 @@ public class Search {
         return null;
     }
 
-    public static <T extends Comparable<T>> T Binary(ArrayList<T> list, T value) {
+    public static <T> T Linear(HashMap<Integer, T> map, T value) {
+        return Linear(map.values(), value);
+    }
+
+    public static <T extends Comparable<T>> T Binary(List<T> list, T value) {
         int low = 0, mid, high = list.size() - 1;
         while (low <= high) {
             mid = (low + high) / 2;
@@ -23,6 +32,11 @@ public class Search {
                 return list.get(mid);
             }
         }
+        return null;
+    }
+
+    public static <T extends Comparable<T>> T Binary(Map<Integer, T> map, T value) {
+        // Idk
         return null;
     }
 }
