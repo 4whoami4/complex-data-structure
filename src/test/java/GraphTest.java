@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Set;
 
 public class GraphTest {
 
@@ -59,5 +60,27 @@ public class GraphTest {
         assert adjacent.size() == 2;
         assert adjacent.contains(new Vertex("Emilia"));
         assert adjacent.contains(new Vertex("Robert"));
+    }
+
+    @Test
+    public void BreadthFirstTraversal() {
+        Set<String> traversed = graph.BreadthFirstTraversal(graph, "Emilia");
+        assert traversed.size() == 5;
+        assert traversed.contains("Emilia");
+        assert traversed.contains("Krzysztof");
+        assert traversed.contains("Maciek");
+        assert traversed.contains("Robert");
+        assert traversed.contains("Marek");
+    }
+
+    @Test
+    public void DepthFirstTraversal() {
+        Set<String> traversed = graph.DepthFirstTraversal(graph, "Krzysztof");
+        assert traversed.size() == 5;
+        assert traversed.contains("Krzysztof");
+        assert traversed.contains("Emilia");
+        assert traversed.contains("Maciek");
+        assert traversed.contains("Robert");
+        assert traversed.contains("Marek");
     }
 }
