@@ -1,28 +1,26 @@
 package com.saxion.graph;
 
 public class Vertex {
-    public String label;
+    public String value;
 
-    public Vertex(String label) {
-        this.label = label;
+    public Vertex(String value) {
+        this.value = value;
     }
 
     @Override
     public int hashCode() {
-        return label.hashCode();
+        return value.hashCode();
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Vertex) {
-            var vertex = (Vertex) obj;
-            return label.equals(vertex.label);
-        }
+        if (obj instanceof Vertex vertex)
+            return value.equals(vertex.value);
         return false;
     }
 
     @Override
     public String toString() {
-        return label;
+        return value;
     }
 }
