@@ -43,13 +43,17 @@ public class Tree<T> {
     }
 
     public Node<T> Insert(Node<T> node, int key) {
+        return Insert(node, key, null);
+    }
+
+    public Node<T> Insert(Node<T> node, int key, T value) {
         if (node == null)
-            return (new Node<T>(key));
+            return (new Node<>(key, value));
 
         if (key < node.key)
-            node.left = Insert(node.left, key);
+            node.left = Insert(node.left, key, value);
         else if (key > node.key)
-            node.right = Insert(node.right, key);
+            node.right = Insert(node.right, key, value);
         else
             return node;
 
@@ -86,5 +90,15 @@ public class Tree<T> {
         result.addAll(PreOrder(node.right));
 
         return result;
+    }
+
+    public Node<T> Search(Node<T> root, int key) {
+        if (root == null)
+            return null;
+        else if (root.key == key)
+            return root;
+        else if (root.key > key)
+            return Search(root.left, key);
+        return Search(root.right, key);
     }
 }
