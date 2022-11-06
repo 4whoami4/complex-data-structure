@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Vertex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AVLTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AVLTreeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,7 @@
       <workItem from="1667736006379" duration="5641000" />
       <workItem from="1667742995044" duration="324000" />
       <workItem from="1667743324461" duration="6213000" />
-      <workItem from="1667749971393" duration="1658000" />
+      <workItem from="1667749971393" duration="1925000" />
     </task>
     <servers />
   </component>
