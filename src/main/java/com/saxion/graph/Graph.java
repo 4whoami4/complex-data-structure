@@ -80,4 +80,49 @@ public class Graph {
         }
         return traversed;
     }
+
+    public Graph CalculateShortestPathFromSource(Graph graph, Vertex source) {
+        source.distance = 0;
+        Set<Vertex> settledNodes = new HashSet<>();
+        Set<Vertex> unsettledNodes = new HashSet<>();
+        unsettledNodes.add(source);
+
+        while (unsettledNodes.size() != 0) {
+            Vertex currentNode = GetLowestDistanceNode(unsettledNodes);
+            unsettledNodes.remove(currentNode);
+            for (Map.Entry<Vertex, Integer> adjacencyPair : currentNode.adjacencies.entrySet()) {
+                Vertex adjacentNode = adjacencyPair.getKey();
+                Integer edgeWeight = adjacencyPair.getValue();
+                if (!settledNodes.contains(adjacentNode)) {
+                    CalculateMinimumDistance(adjacentNode, edgeWeight, currentNode);
+                    unsettledNodes.add(adjacentNode);
+                }
+            }
+            settledNodes.add(currentNode);
+        }
+        return graph;
+    }
+
+    private Vertex GetLowestDistanceNode(Set<Vertex> unsettledNodes) {
+        Vertex lowestDistanceNode = null;
+        int lowestDistance = Integer.MAX_VALUE;
+        for (Vertex node : unsettledNodes) {
+            int nodeDistance = node.distance;
+            if (nodeDistance < lowestDistance) {
+                lowestDistance = nodeDistance;
+                lowestDistanceNode = node;
+            }
+        }
+        return lowestDistanceNode;
+    }
+
+    private void CalculateMinimumDistance(Vertex evaluationNode, Integer edgeWeigh, Vertex sourceNode) {
+        Integer sourceDistance = sourceNode.distance;
+        if (sourceDistance + edgeWeigh < evaluationNode.distance) {
+            evaluationNode.distance = sourceDistance + edgeWeigh;
+            LinkedList<Vertex> shortestPath = new LinkedList<>(sourceNode.shortestPath);
+            shortestPath.add(sourceNode);
+            evaluationNode.shortestPath = shortestPath;
+        }
+    }
 }

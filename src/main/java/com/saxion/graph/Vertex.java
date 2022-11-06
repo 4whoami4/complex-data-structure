@@ -1,7 +1,12 @@
 package com.saxion.graph;
 
+import java.util.*;
+
 public class Vertex {
     public String value;
+    public int distance = Integer.MAX_VALUE;
+    public Map<Vertex, Integer> adjacencies = new HashMap<>();
+    public List<Vertex> shortestPath = new LinkedList<>();
 
     public Vertex(String value) {
         this.value = value;
