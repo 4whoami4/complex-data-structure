@@ -1,4 +1,4 @@
-package com.saxion;
+package com.saxion.utils;
 
 public class Validate {
     public static boolean IsEmailValid(String email) {

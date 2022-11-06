@@ -1,4 +1,4 @@
-package com.saxion;
+package com.saxion.utils;
 
 import java.util.ArrayList;
 import java.util.List;

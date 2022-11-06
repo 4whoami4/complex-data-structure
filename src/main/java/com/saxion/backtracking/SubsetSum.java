@@ -1,6 +1,6 @@
 package com.saxion.backtracking;
 
-import com.saxion.Sort;
+import com.saxion.utils.Sort;
 
 import java.util.ArrayList;
 

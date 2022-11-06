@@ -1,4 +1,4 @@
-package com.saxion;
+package com.saxion.records;
 
 public record Package(int packageId, int length, int width, int height, float weight, String entryDate,
                       int clientId) implements Comparable<Package> {

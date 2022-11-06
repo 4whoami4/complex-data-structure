@@ -1,4 +1,4 @@
-import com.saxion.Validate;
+import com.saxion.utils.Validate;
 import org.junit.jupiter.api.Test;
 
 public class ValidateTest {

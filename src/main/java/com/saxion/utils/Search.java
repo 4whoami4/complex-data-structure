@@ -1,4 +1,4 @@
-package com.saxion;
+package com.saxion.utils;
 
 import java.util.HashMap;
 import java.util.List;

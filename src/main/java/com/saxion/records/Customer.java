@@ -1,4 +1,4 @@
-package com.saxion;
+package com.saxion.records;
 
 public record Customer(int clientId, String name, String initials, int addressX,
                        int addressY) implements Comparable<Customer> {

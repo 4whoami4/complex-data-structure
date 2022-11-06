@@ -1,4 +1,7 @@
-package com.saxion;
+package com.saxion.utils;
+
+import com.saxion.records.Customer;
+import com.saxion.records.Package;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

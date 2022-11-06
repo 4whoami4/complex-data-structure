@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ValidateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/PackageGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Sort.java" afterDir="false" />
-    </list>
+    <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +204,7 @@
       <workItem from="1667736006379" duration="5641000" />
       <workItem from="1667742995044" duration="324000" />
       <workItem from="1667743324461" duration="6213000" />
-      <workItem from="1667749971393" duration="12539000" />
+      <workItem from="1667749971393" duration="13200000" />
     </task>
     <servers />
   </component>

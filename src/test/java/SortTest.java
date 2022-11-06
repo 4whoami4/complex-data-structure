@@ -1,7 +1,7 @@
-import com.saxion.Customer;
-import com.saxion.Package;
-import com.saxion.Reader;
-import com.saxion.Sort;
+import com.saxion.records.Customer;
+import com.saxion.records.Package;
+import com.saxion.utils.Reader;
+import com.saxion.utils.Sort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
