@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/AVLTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,43 @@
       <recent name="C:\Users\kaluc\Documents\CDS\src\main\java\com\saxion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SearchTest">
+  <component name="RunManager" selected="Gradle.AVLTreeTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.saxion.Main" />
+      <module name="CDS.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saxion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AVLTreeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;AVLTreeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="SearchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -132,35 +167,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;SortTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AVLTreeTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.SearchTest" />
         <item itemvalue="Gradle.SearchTest.BinarySearchPackagesMap" />
         <item itemvalue="Gradle.SearchTest.LinearSearchCustomersMap" />
-        <item itemvalue="Gradle.SortTest" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +187,7 @@
       <updated>1667736004175</updated>
       <workItem from="1667736006379" duration="5641000" />
       <workItem from="1667742995044" duration="324000" />
-      <workItem from="1667743324461" duration="2152000" />
+      <workItem from="1667743324461" duration="4391000" />
     </task>
     <servers />
   </component>
