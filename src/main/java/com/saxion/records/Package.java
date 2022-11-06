@@ -1,9 +1,11 @@
 package com.saxion.records;
 
+import com.saxion.utils.PackageStatus;
+
 public record Package(int packageId, int length, int width, int height, float weight, String entryDate,
-                      int clientId) implements Comparable<Package> {
+                      PackageStatus status, int clientId) implements Comparable<Package> {
     public String toString() {
-        return packageId + ";" + length + ";" + width + ";" + height + ";" + weight + ";" + entryDate + ";" + clientId;
+        return packageId + ";" + length + ";" + width + ";" + height + ";" + weight + ";" + entryDate + ";" + status + ";" + clientId;
     }
 
     @Override
@@ -11,3 +13,4 @@ public record Package(int packageId, int length, int width, int height, float we
         return packageId - pack.packageId;
     }
 }
+
