@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GraphTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
       <recent name="C:\Users\kaluc\Documents\CDS\src\main\java\com\saxion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GraphTest">
+  <component name="RunManager" selected="Gradle.GraphTest.AddEdge">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.saxion.Main" />
       <module name="CDS.main" />
@@ -142,7 +141,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SearchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GraphTest.AddEdge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -155,7 +154,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SearchTest&quot;" />
+            <option value="&quot;GraphTest.AddEdge&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -167,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GraphTest.AddEdge" />
         <item itemvalue="Gradle.GraphTest" />
         <item itemvalue="Gradle.AVLTreeTest.Search" />
         <item itemvalue="Gradle.AVLTreeTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.SearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +185,7 @@
       <workItem from="1667736006379" duration="5641000" />
       <workItem from="1667742995044" duration="324000" />
       <workItem from="1667743324461" duration="6213000" />
-      <workItem from="1667749971393" duration="2782000" />
+      <workItem from="1667749971393" duration="3098000" />
     </task>
     <servers />
   </component>

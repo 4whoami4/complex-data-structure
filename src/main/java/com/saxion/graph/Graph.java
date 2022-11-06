@@ -1,15 +1,16 @@
 package com.saxion.graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
     private final Map<Vertex, List<Vertex>> vertices;
 
     public Graph() {
         vertices = new HashMap<>();
+    }
+
+    public Map<Vertex, List<Vertex>> GetVertices() {
+        return vertices;
     }
 
     public void AddVertex(String label) {
