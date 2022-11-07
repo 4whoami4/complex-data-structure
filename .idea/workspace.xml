@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b62fb581-4a50-46ad-aa35-b8562c8808f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/utils/PackageStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Backtrack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Heapsort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/records/HasId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/saxion/utils/CustomersMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CustomerMapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/avl/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/backtracking/HamiltonianCycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/backtracking/SubsetSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/graph/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/records/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/records/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/records/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/records/Package.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/utils/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/utils/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/utils/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/utils/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saxion/utils/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saxion/utils/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AVLTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BacktrackingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BacktrackingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GraphTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -73,8 +89,8 @@
       <recent name="C:\Users\kaluc\Documents\CDS\src\main\java\com\saxion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ValidateTest.ValidatePassword">
-    <configuration name="ValidateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.BacktrackingTest">
+    <configuration name="BacktrackingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,7 +103,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ValidateTest&quot;" />
+            <option value="&quot;BacktrackingTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -97,7 +113,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ValidateTest.ValidateEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CustomerMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -110,7 +126,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ValidateTest.ValidateEmail&quot;" />
+            <option value="&quot;CustomerMapTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -120,7 +136,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ValidateTest.ValidatePassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GraphTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -133,7 +149,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ValidateTest.ValidatePassword&quot;" />
+            <option value="&quot;GraphTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -143,7 +159,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ValidateTest.ValidatePhoneNumber" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TreeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -156,7 +172,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ValidateTest.ValidatePhoneNumber&quot;" />
+            <option value="&quot;TreeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,36 +182,26 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ValidateTest.ValidatePostalCode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ValidateTest.ValidatePostalCode&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="SortTest,MergeSortCustomers and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CDS.test" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="SortTest,MergeSortCustomers" />
+        <pattern testClass="SortTest,MergeSortPackages" />
+        <pattern testClass="SortTest,QuickSortCustomers" />
+        <pattern testClass="SortTest,QuickSortPackages" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ValidateTest.ValidatePassword" />
-        <item itemvalue="Gradle.ValidateTest.ValidatePostalCode" />
-        <item itemvalue="Gradle.ValidateTest.ValidatePhoneNumber" />
-        <item itemvalue="Gradle.ValidateTest" />
-        <item itemvalue="Gradle.ValidateTest.ValidateEmail" />
+        <item itemvalue="Gradle.BacktrackingTest" />
+        <item itemvalue="Gradle.CustomerMapTest" />
+        <item itemvalue="Gradle.GraphTest" />
+        <item itemvalue="JUnit.SortTest,MergeSortCustomers and 3 more" />
+        <item itemvalue="Gradle.TreeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +216,7 @@
       <workItem from="1667736006379" duration="5641000" />
       <workItem from="1667742995044" duration="324000" />
       <workItem from="1667743324461" duration="6213000" />
-      <workItem from="1667749971393" duration="14012000" />
+      <workItem from="1667749971393" duration="23083000" />
     </task>
     <servers />
   </component>

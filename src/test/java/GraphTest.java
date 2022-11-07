@@ -13,74 +13,56 @@ public class GraphTest {
     @BeforeEach
     public void Setup() {
         graph = new Graph();
-        graph.AddVertex("Krzysztof");
-        graph.AddVertex("Emilia");
-        graph.AddVertex("Maciek");
-        graph.AddVertex("Robert");
-        graph.AddVertex("Marek");
-        graph.AddEdge("Krzysztof", "Emilia");
-        graph.AddEdge("Krzysztof", "Robert");
-        graph.AddEdge("Emilia", "Maciek");
-        graph.AddEdge("Robert", "Maciek");
-        graph.AddEdge("Emilia", "Marek");
-        graph.AddEdge("Robert", "Marek");
+
+        graph.AddVertex(1, 2);
+        graph.AddVertex(2, 3);
+        graph.AddVertex(4, 3);
+        graph.AddEdge(4, 3, 2, 3);
     }
 
     @Test
     public void AddVertex() {
-        assert graph.GetVertices().size() == 5;
-        graph.AddVertex("Andrzej");
-        assert graph.GetVertices().size() == 6;
-    }
-
-    @Test
-    public void RemoveVertex() {
-        assert graph.GetVertices().size() == 5;
-        graph.RemoveVertex("Krzysztof");
+        assert graph.GetVertices().size() == 3;
+        graph.AddVertex(1, 1);
         assert graph.GetVertices().size() == 4;
     }
 
     @Test
-    public void AddEdge() {
-        graph.AddEdge("Krzysztof", "Marek");
-        List<Vertex> adjacentVertices = graph.GetAdjacentVertices("Krzysztof");
-        assert adjacentVertices.size() == 3;
+    public void RemoveVertex() {
+        assert graph.GetVertices().size() == 3;
+        graph.RemoveVertex(1, 2);
+        assert graph.GetVertices().size() == 2;
     }
 
     @Test
-    public void RemoveEdge() {
-        graph.RemoveEdge("Krzysztof", "Emilia");
-        List<Vertex> adjacentVertices = graph.GetAdjacentVertices("Krzysztof");
+    public void AddEdge() {
+        graph.AddEdge(1, 2, 4, 3);
+        List<Vertex> adjacentVertices = graph.GetAdjacentVertices(1, 2);
         assert adjacentVertices.size() == 1;
     }
 
     @Test
+    public void RemoveEdge() {
+        graph.RemoveEdge(1, 2, 2, 3);
+        List<Vertex> adjacentVertices = graph.GetAdjacentVertices(1, 2);
+        assert adjacentVertices.size() == 0;
+    }
+
+    @Test
     public void AdjacentVertices() {
-        List<Vertex> adjacent = graph.GetAdjacentVertices("Krzysztof");
-        assert adjacent.size() == 2;
-        assert adjacent.contains(new Vertex("Emilia"));
-        assert adjacent.contains(new Vertex("Robert"));
+        List<Vertex> adjacent = graph.GetAdjacentVertices(4, 3);
+        assert adjacent.size() == 1;
     }
 
     @Test
     public void BreadthFirstTraversal() {
-        Set<String> traversed = graph.BreadthFirstTraversal(graph, "Emilia");
-        assert traversed.size() == 5;
-        assert traversed.contains("Emilia");
-        assert traversed.contains("Krzysztof");
-        assert traversed.contains("Maciek");
-        assert traversed.contains("Robert");
-        assert traversed.contains("Marek");
+        Set<Vertex> traversed = graph.BreadthFirstTraversal(graph, new Vertex(4, 3));
+        assert traversed.size() == 2;
     }
 
     @Test
     public void DepthFirstTraversal() {
-        Set<String> traversed = graph.DepthFirstTraversal(graph, "Krzysztof");
-        assert traversed.size() == 5;
-        assert traversed.contains("Krzysztof");
-        assert traversed.contains("Emilia");
-        assert traversed.contains("Maciek");
-        assert traversed.contains("Robert");
-        assert traversed.contains("Marek");
+        Set<Vertex> traversed = graph.DepthFirstTraversal(graph, new Vertex(4, 3));
+        assert traversed.size() == 2;
     }
 }

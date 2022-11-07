@@ -13,28 +13,28 @@ public class Graph {
         return vertices;
     }
 
-    public void AddVertex(String label) {
-        vertices.putIfAbsent(new Vertex(label), new ArrayList<>());
+    public void AddVertex(int addressX, int addressY) {
+        vertices.putIfAbsent(new Vertex(addressX, addressY), new ArrayList<>());
     }
 
-    public void RemoveVertex(String val) {
-        Vertex v = new Vertex(val);
+    public void RemoveVertex(int addressX, int addressY) {
+        Vertex v = new Vertex(addressX, addressY);
 
         vertices.values().forEach(e -> e.remove(v));
-        vertices.remove(new Vertex(val));
+        vertices.remove(new Vertex(addressX, addressY));
     }
 
-    public void AddEdge(String val, String val1) {
-        Vertex v1 = new Vertex(val);
-        Vertex v2 = new Vertex(val1);
+    public void AddEdge(int addressX1, int addressY1, int addressX2, int addressY2) {
+        Vertex v1 = new Vertex(addressX1, addressY1);
+        Vertex v2 = new Vertex(addressX2, addressY2);
 
         vertices.get(v1).add(v2);
         vertices.get(v2).add(v1);
     }
 
-    public void RemoveEdge(String val, String val1) {
-        Vertex v1 = new Vertex(val);
-        Vertex v2 = new Vertex(val1);
+    public void RemoveEdge(int addressX1, int addressY1, int addressX2, int addressY2) {
+        Vertex v1 = new Vertex(addressX1, addressY1);
+        Vertex v2 = new Vertex(addressX2, addressY2);
 
         List<Vertex> eV1 = vertices.get(v1);
         List<Vertex> eV2 = vertices.get(v2);
@@ -43,40 +43,44 @@ public class Graph {
         if (eV2 != null) eV2.remove(v1);
     }
 
-    public List<Vertex> GetAdjacentVertices(String val) {
-        return vertices.get(new Vertex(val));
+    public List<Vertex> GetAdjacentVertices(Vertex vertex) {
+        return vertices.get(vertex);
     }
 
-    public Set<String> BreadthFirstTraversal(Graph graph, String root) {
-        Set<String> visited = new LinkedHashSet<>();
-        Queue<String> queue = new LinkedList<>();
+    public List<Vertex> GetAdjacentVertices(int addressX, int addressY) {
+        return GetAdjacentVertices(new Vertex(addressX, addressY));
+    }
+
+    public Set<Vertex> BreadthFirstTraversal(Graph graph, Vertex root) {
+        Set<Vertex> visited = new LinkedHashSet<>();
+        Queue<Vertex> queue = new LinkedList<>();
         queue.add(root);
         visited.add(root);
 
         while (!queue.isEmpty()) {
-            String vertex = queue.poll();
+            Vertex vertex = queue.poll();
             for (Vertex v : graph.GetAdjacentVertices(vertex)) {
-                if (visited.contains(v.value))
+                if (visited.contains(v))
                     continue;
-                visited.add(v.value);
-                queue.add(v.value);
+                visited.add(v);
+                queue.add(v);
             }
         }
         return visited;
     }
 
-    public Set<String> DepthFirstTraversal(Graph graph, String root) {
-        Set<String> traversed = new LinkedHashSet<>();
-        Stack<String> stack = new Stack<>();
+    public Set<Vertex> DepthFirstTraversal(Graph graph, Vertex root) {
+        Set<Vertex> traversed = new LinkedHashSet<>();
+        Stack<Vertex> stack = new Stack<>();
         stack.push(root);
 
         while (!stack.isEmpty()) {
-            String vertex = stack.pop();
+            Vertex vertex = stack.pop();
             if (traversed.contains(vertex))
                 continue;
             traversed.add(vertex);
             for (Vertex v : graph.GetAdjacentVertices(vertex))
-                stack.push(v.value);
+                stack.push(v);
         }
         return traversed;
     }
@@ -118,11 +122,13 @@ public class Graph {
 
     private void CalculateMinimumDistance(Vertex evaluationNode, Integer edgeWeigh, Vertex sourceNode) {
         Integer sourceDistance = sourceNode.distance;
-        if (sourceDistance + edgeWeigh < evaluationNode.distance) {
-            evaluationNode.distance = sourceDistance + edgeWeigh;
-            LinkedList<Vertex> shortestPath = new LinkedList<>(sourceNode.shortestPath);
-            shortestPath.add(sourceNode);
-            evaluationNode.shortestPath = shortestPath;
-        }
+
+        if (sourceDistance + edgeWeigh >= evaluationNode.distance)
+            return;
+        
+        evaluationNode.distance = sourceDistance + edgeWeigh;
+        LinkedList<Vertex> shortestPath = new LinkedList<>(sourceNode.shortestPath);
+        shortestPath.add(sourceNode);
+        evaluationNode.shortestPath = shortestPath;
     }
 }

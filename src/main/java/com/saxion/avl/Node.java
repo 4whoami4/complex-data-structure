@@ -1,7 +1,7 @@
 package com.saxion.avl;
 
 public class Node<T> {
-    public int key, height = 1;
+    public int key, height;
     public T value;
     public Node<T> left, right;
 
@@ -9,8 +9,9 @@ public class Node<T> {
         this.key = key;
     }
 
-    public Node(int key, T value) {
+    public Node(int key, int height, T value) {
         this.key = key;
         this.value = value;
+        this.height = height;
     }
 }

@@ -42,18 +42,14 @@ public class Tree<T> {
         return height(N.left) - height(N.right);
     }
 
-    public Node<T> Insert(Node<T> node, int key) {
-        return Insert(node, key, null);
-    }
-
-    public Node<T> Insert(Node<T> node, int key, T value) {
+    public Node<T> Insert(Node<T> node, int key, int height, T value) {
         if (node == null)
-            return (new Node<>(key, value));
+            return (new Node<>(key, height, value));
 
         if (key < node.key)
-            node.left = Insert(node.left, key, value);
+            node.left = Insert(node.left, key, height, value);
         else if (key > node.key)
-            node.right = Insert(node.right, key, value);
+            node.right = Insert(node.right, key, height, value);
         else
             return node;
 
